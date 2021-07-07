@@ -37,9 +37,10 @@ systemctl start httpd
 systemctl enable httpd
 systemctl status httpd
 
-# Add firewall rules for httpd
+# Add firewall rules for httpd and pgsql
 firewall-cmd --permanent --zone public --add-port 80/tcp
 firewall-cmd --permanent --zone public --add-port 443/tcp
+firewall-cmd --permanent --zone public --add-port 5432/tcp
 firewall-cmd --reload
 
 # Run pgAdmin4 configure script (create a user account used to authenticate in the web interface and configure Apache & SELinux)
