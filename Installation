@@ -44,3 +44,6 @@ firewall-cmd --reload
 
 # Run pgAdmin4 configure script (create a user account used to authenticate in the web interface and configure Apache & SELinux)
 /usr/pgadmin4/bin/setup-web.sh
+
+# Access to pgAdmin4-web
+http://SERVER_IP/pgadmin4
