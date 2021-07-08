@@ -16,4 +16,5 @@ vim /db/pgsql/pg_hba.conf
 # Add string with parameters (give access from all networks)
 host	all		all             0.0.0.0/0               password
 
+# Restart service to appply changes
 systemctl restart postgresql-10.service
