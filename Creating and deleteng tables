@@ -1,3 +1,4 @@
+### Creating tables
 CREATE TABLE publisher
 (
   publisher_id integer PRIMARY KEY,
@@ -11,3 +12,9 @@ CREATE TABLE book
   title text NOT NULL,
   isbn varchar(32) NOT NULL
 );
+
+
+### Deleting tables
+
+DROP TABLE publisher;
+DROP TABLE book
