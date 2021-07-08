@@ -1,0 +1,17 @@
+#### Find out the config file
+psql -U postgres -c 'SHOW config_file'
+
+# or
+su - postgres -c "psql -c 'SHOW config_file;'"
+
+# Edit postgresql.conf
+vim /db/pgsql/postgresql.conf
+
+# Change parametre 
+listen_addresses = '*'
+
+# Edit pg_hba.conf
+vim /db/pgsql/pg_hba.conf
+
+# Add string with parameters (give access from all networks)
+host	all		all             0.0.0.0/0               password
