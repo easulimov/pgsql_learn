@@ -1,12 +1,12 @@
-### Create database script
+### Create database 
 CREATE DATABASE test_db
     WITH 
     OWNER = bart
     ENCODING = 'UTF8'
     CONNECTION LIMIT = -1;
     
-### Break the connection with database script
+### Break the connection with database ('test_db') 
 SELECT pg_terminate_backend(pg_stat_activity.pid)
 FROM pg_stat_activity
-WHERE pg_stat_activity.datname = 'testdb'
+WHERE pg_stat_activity.datname = 'test_db'
   AND pid <> pg_backend_pid()
