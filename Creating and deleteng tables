@@ -56,6 +56,8 @@ ALTER TABLE public.book
 ####################################################
 
 
+### Using foreign key
+
 CREATE TABLE book (
 	
     book_id integer PRIMARY KEY NOT NULL,
@@ -65,3 +67,30 @@ CREATE TABLE book (
 
 );
 
+
+
+### Relation many to many
+
+CREATE TABLE book (
+	
+    book_id integer PRIMARY KEY,
+    title text NOT NULL,
+    isbn character varying(32) NOT NULL
+   
+ );
+ 
+ CREATE TABLE author (
+	
+    author_id integer PRIMARY KEY,
+    full_name text NOT NULL,
+    rating real
+   
+ );
+
+CREATE TABLE book_author (
+	
+    book_id integer REFERENCES book(book_id),
+    author_id integer REFERENCES author(author_id),
+    CONSTRAINT pk_book_author PRIMARY KEY (book_id, author_id)
+
+);
