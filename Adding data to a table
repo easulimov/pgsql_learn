@@ -1,9 +1,13 @@
+### Add data to a book table
 INSERT INTO book
 VALUES
 (1, 'Cat''s book', '11112222'),
 (2, 'Dog''s book', '11113333'),
 (3, 'Parrot''s book', '11114444');
 
+
+
+### Add data to a publisher table
 INSERT INTO publisher
 VALUES
 (1, 'Piter', 'Saint-Petersburg'),
