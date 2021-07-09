@@ -18,3 +18,40 @@ CREATE TABLE book
 
 DROP TABLE publisher;
 DROP TABLE book
+
+
+
+
+
+####################################################
+CREATE TABLE IF NOT EXISTS public.publisher
+(
+    publisher_id integer NOT NULL,
+    org_name character varying(128) NOT NULL,
+    address text NOT NULL,
+    CONSTRAINT pk_publisher_id PRIMARY KEY (publisher_id)
+)
+WITH (
+    OIDS = FALSE
+);
+
+ALTER TABLE public.publisher
+    OWNER to bart;
+####################################################
+
+CREATE TABLE IF NOT EXISTS public.book
+(
+    book_id integer NOT NULL,
+    title text NOT NULL,
+    isbn character varying(32) NOT NULL,
+    PRIMARY KEY (book_id)
+)
+WITH (
+    OIDS = FALSE
+);
+
+ALTER TABLE public.book
+    OWNER to bart;
+####################################################
+
+
