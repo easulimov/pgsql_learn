@@ -18,7 +18,7 @@ CREATE TABLE book
 
 DROP TABLE publisher;
 DROP TABLE book;
-DROP TABLE book IF EXISTS;
+DROP TABLE IF EXISTS book ;
 
 
 
