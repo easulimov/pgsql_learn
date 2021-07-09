@@ -1,0 +1,11 @@
+INSERT INTO book
+VALUES
+(1, 'Cat''s book', '11112222'),
+(2, 'Dog''s book', '11113333'),
+(3, 'Parrot''s book', '11114444');
+
+INSERT INTO publisher
+VALUES
+(1, 'Piter', 'Saint-Petersburg'),
+(2, 'SuperBook', 'Moscow'),
+(3, 'NewBook', 'New-York');
