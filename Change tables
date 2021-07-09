@@ -1,0 +1,7 @@
+### Add new column for foreign key data
+ALTER TABLE book
+ADD COLUMN fk_publisher_id integer;
+
+### Add foreign key
+ALTER TABLE book
+ADD CONSTRAINT fk_book_publisher FOREIGN KEY(fk_publisher_id) REFERENCES publisher(publisher_id);
