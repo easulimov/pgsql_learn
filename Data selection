@@ -1,0 +1,11 @@
+### Select all data from table
+SELECT *
+FROM products
+
+### Select individual data from table
+SELECT product_id, product_name, unit_price
+FROM products
+
+### Select individual data and multiply it
+SELECT product_id, product_name, unit_price * units_in_stock
+FROM products
