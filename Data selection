@@ -17,3 +17,10 @@ FROM employees
 SELECT DISTINCT city, country
 FROM employees
 
+
+### Get count of all rows (does not count records with NULL values)
+SELECT COUNT(*)
+FROM orders
+
+SELECT COUNT(DISTINCT country)
+FROM employees
