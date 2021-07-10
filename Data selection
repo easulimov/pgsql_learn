@@ -9,3 +9,11 @@ FROM products
 ### Select individual data and multiply it
 SELECT product_id, product_name, unit_price * units_in_stock
 FROM products
+
+### Select without dublicates
+SELECT DISTINCT city
+FROM employees
+
+SELECT DISTINCT city, country
+FROM employees
+
