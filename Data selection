@@ -25,7 +25,7 @@ FROM orders
 SELECT COUNT(DISTINCT country)
 FROM employees
 
-### Select with condition
+### Select with WHERE
 SELECT *
 FROM customers
 WHERE country = 'USA'
