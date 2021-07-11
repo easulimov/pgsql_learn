@@ -38,3 +38,6 @@ SELECT COUNT(*)
 FROM products
 WHERE unit_price > 20
 
+SELECT *
+FROM orders
+WHERE order_date > '1998-04-08'
