@@ -30,10 +30,6 @@ SELECT *
 FROM customers
 WHERE country = 'USA'
 
-SELECT customer_id, company_name, contact_name, city, country, phone
-FROM customers
-WHERE country = 'USA' AND region = 'WA'
-
 SELECT COUNT(*)
 FROM products
 WHERE unit_price > 20
@@ -41,3 +37,9 @@ WHERE unit_price > 20
 SELECT *
 FROM orders
 WHERE order_date > '1998-04-08'
+
+SELECT customer_id, company_name, contact_name, city, country, phone
+FROM customers
+WHERE country = 'USA' AND region = 'WA'
+
+
