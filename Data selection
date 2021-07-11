@@ -50,5 +50,7 @@ SELECT *
 FROM orders
 WHERE shipped_date > '1998-04-30' AND (freight < 75 OR freight > 150)
 
-
-
+### Selecting data in an interval (BETWEEN)
+SELECT COUNT(*)
+FROM orders
+WHERE freight BETWEEN 20 AND 40
