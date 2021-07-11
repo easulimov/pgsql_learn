@@ -34,7 +34,7 @@ SELECT customer_id, company_name, contact_name, city, country, phone
 FROM customers
 WHERE country = 'USA' AND region = 'WA'
 
-SELECT *
+SELECT COUNT(*)
 FROM products
 WHERE unit_price > 20
 
