@@ -1,45 +1,54 @@
 ### Select all data from table
 SELECT *
-FROM products
+FROM products;
 
 ### Select individual data from table
 SELECT product_id, product_name, unit_price
-FROM products
+FROM products;
 
 ### Select individual data and multiply it
 SELECT product_id, product_name, unit_price * units_in_stock
-FROM products
+FROM products;
 
 ### Select without dublicates
 SELECT DISTINCT city
-FROM employees
+FROM employees;
 
 SELECT DISTINCT city, country
-FROM employees
+FROM employees;
 
 
 ### Get count of all rows (does not count records with NULL values)
 SELECT COUNT(*)
-FROM orders
+FROM orders;
 
 SELECT COUNT(DISTINCT country)
-FROM employees
+FROM employees;
 
 ### Select with WHERE
 SELECT *
 FROM customers
-WHERE country = 'USA'
+WHERE country = 'USA';
 
 SELECT COUNT(*)
 FROM products
-WHERE unit_price > 20
+WHERE unit_price > 20;
 
 SELECT *
 FROM orders
-WHERE order_date > '1998-04-08'
+WHERE order_date > '1998-04-08';
 
 SELECT customer_id, company_name, contact_name, city, country, phone
 FROM customers
-WHERE country = 'USA' AND region = 'WA'
+WHERE country = 'USA' AND region = 'WA';
+
+SELECT *
+FROM customers
+WHERE city = 'Berlin' OR city = 'London' OR city = 'San Francisco';
+
+SELECT *
+FROM orders
+WHERE shipped_date > '1998-04-30' AND (freight < 75 OR freight > 150)
+
 
 
