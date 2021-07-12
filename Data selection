@@ -107,3 +107,14 @@ WHERE discontinued <> 1
 SELECT SUM (units_in_stock)
 FROM products
 WHERE discontinued <> 1
+
+### Pattern matching (LIKE)
+### Placeholder '%' - 0, 1 or more of any characters
+### '_' - is equal to any one character
+SELECT first_name, last_name
+FROM employees
+WHERE first_name LIKE '%et'
+
+SELECT first_name, last_name
+FROM employees
+WHERE last_name LIKE '_a%'
