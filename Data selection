@@ -78,3 +78,32 @@ ORDER BY country DESC
 SELECT DISTINCT country, city
 FROM customers
 ORDER BY country ASC, city ASC
+
+### Calculating the minimum, maximum, average and summarize (MIN, MAX, AVG, SUM )
+SELECT ship_city, order_date
+FROM orders
+WHERE ship_city = 'London'
+ORDER BY order_date ASC
+
+#or
+SELECT MIN (order_date)
+FROM orders
+WHERE ship_city = 'London'
+
+SELECT ship_city, order_date
+FROM orders
+WHERE ship_city = 'London'
+ORDER BY order_date DESC
+
+#or
+SELECT MAX (order_date)
+FROM orders
+WHERE ship_city = 'London'
+
+SELECT AVG (unit_price)
+FROM products
+WHERE discontinued <> 1
+
+SELECT SUM (units_in_stock)
+FROM products
+WHERE discontinued <> 1
