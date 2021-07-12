@@ -65,3 +65,12 @@ WHERE country IN ('Mexico', 'USA', 'UK')
 SELECT *
 FROM customers
 WHERE country NOT IN ('Mexico', 'USA', 'UK')
+
+### Select sorted data (ORDER BY ascending & descending)
+SELECT DISTINCT country
+FROM customers
+ORDER BY country ASC
+
+SELECT DISTINCT country
+FROM customers
+ORDER BY country DESC
