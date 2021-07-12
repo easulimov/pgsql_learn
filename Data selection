@@ -50,7 +50,18 @@ SELECT *
 FROM orders
 WHERE shipped_date > '1998-04-30' AND (freight < 75 OR freight > 150)
 
-### Selecting data in an interval (BETWEEN)
+### Select data in an interval (BETWEEN)
 SELECT COUNT(*)
 FROM orders
 WHERE freight BETWEEN 20 AND 40
+
+
+### Select data from the list (is equivalent to using many OR)
+SELECT *
+FROM customers
+WHERE country IN ('Mexico', 'USA', 'UK')
+
+### Select everything except what is in the list
+SELECT *
+FROM customers
+WHERE country NOT IN ('Mexico', 'USA', 'UK')
