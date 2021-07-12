@@ -118,3 +118,11 @@ WHERE first_name LIKE '%et'
 SELECT first_name, last_name
 FROM employees
 WHERE last_name LIKE '_a%'
+
+
+### Output limitation (LIMIT, used at the end of the construction of others)
+SELECT product_name, unit_price
+FROM products
+WHERE discontinued <> 1
+ORDER BY unit_price DESC
+LIMIT 10
