@@ -140,3 +140,11 @@ GROUP BY category_id
 ORDER BY SUM(units_in_stock) DESC
 LIMIT 5
 
+### Filtering grouped data (HAVING)
+SELECT category_id, SUM(unit_price * units_in_stock)
+FROM products
+WHERE discontinued <> 1
+GROUP BY category_id
+HAVING SUM(unit_price * units_in_stock) > 7000
+ORDER BY SUM(unit_price * units_in_stock) ASC
+
