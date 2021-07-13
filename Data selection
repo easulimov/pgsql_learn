@@ -148,3 +148,25 @@ GROUP BY category_id
 HAVING SUM(unit_price * units_in_stock) > 7000
 ORDER BY SUM(unit_price * units_in_stock) ASC
 
+### (UNION, INTERSECT, EXCEPT)
+
+# Union of two selections without repetitions
+SELECT country
+FROM customers
+UNION
+SELECT country
+FROM employees
+
+# Union of two selections with repetitions
+SELECT country
+FROM customers
+UNION ALL
+SELECT country
+FROM employees
+
+# Get matching data in two samples (intersection of data)
+SELECT country
+FROM customers
+INTERSECT
+SELECT country
+FROM suppliers
